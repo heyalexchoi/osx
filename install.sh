@@ -65,6 +65,7 @@ binaries=(
   ffmpeg
   git
   git-extras
+  gpg2
   grep
   imagemagick --with-webp
   mackup
@@ -121,6 +122,7 @@ apps=(
   grandperspective
   istat-menus
   qlvideo # to display video files in finder and quick look
+  postico
 
   # sharing
   dropbox
@@ -130,6 +132,7 @@ apps=(
   google-chrome
   firefoxnightly
   webkit-nightly
+  torbrowser
 
   # communication
   skype
@@ -165,8 +168,8 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 echo "Customizing oh-my-zsh..."
 mkdir -p ~/.oh-my-zsh-custom
-wget https://raw.githubusercontent.com/kangax/osx/master/.oh-my-zsh-custom/aliases.zsh && mv aliases.zsh ~/.oh-my-zsh-custom
-wget https://raw.githubusercontent.com/kangax/osx/master/.oh-my-zsh-custom/functions.zsh && mv functions.zsh ~/.oh-my-zsh-custom
+wget https://raw.githubusercontent.com/heyalexchoi/osx/master/.oh-my-zsh-custom/aliases.zsh && mv aliases.zsh ~/.oh-my-zsh-custom
+wget https://raw.githubusercontent.com/heyalexchoi/osx/master/.oh-my-zsh-custom/functions.zsh && mv functions.zsh ~/.oh-my-zsh-custom
 
 # TODO: Customize `plugins=(git ...)` in .zshrc
 # TODO: Add path to .oh-my-zsh-custom in .zshrc
@@ -176,7 +179,7 @@ echo "Making autojump work with zsh..."
 append_to_zshrc '[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh'
 
 echo "Generating SSH keys (https://help.github.com/articles/generating-ssh-keys)..."
-ssh-keygen -t rsa -C "kangax@gmail.com"
+ssh-keygen -t rsa -C "heyalexchoi@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 pbcopy < ~/.ssh/id_rsa.pub
@@ -211,7 +214,7 @@ echo "Customizing Sublime..."
 wget https://sublime.wbond.net/Package\ Control.sublime-package && mv Package\ Control.sublime-package ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
 
 # download and "install" Preferences file
-wget https://rawgit.com/kangax/osx/master/Preferences.sublime-settings && mv Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+wget https://rawgit.com/heyalexchoi/osx/master/Preferences.sublime-settings && mv Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 
 # download and "install" Packages file
-wget https://rawgit.com/kangax/osx/master/Package\ Control.sublime-settings && mv Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+wget https://rawgit.com/heyalexchoi/osx/master/Package\ Control.sublime-settings && mv Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User

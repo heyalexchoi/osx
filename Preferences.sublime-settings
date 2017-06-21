@@ -31,8 +31,8 @@
     ".git",
     "node_modules"
   ],
-  "font_face": "Monaco",
-  "font_size": 13,
+  "font_face": "Menlo Regular",
+  "font_size": 16,
   "gutter": true,
   "highlight_line": true,
   "highlight_modified_tabs": true,
@@ -42,10 +42,7 @@
     "draw_normal"
   ],
   "remember_open_files": false,
-  "rulers":
-  [
-    80
-  ],
+
   "show_full_path": true,
   "show_minimap": false,
   "sublimelinter_gutter_marks": false,
