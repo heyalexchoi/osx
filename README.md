@@ -1,3 +1,35 @@
+**so you fucked up your computer** - spilled one too many glasses of kombucha onto it, dropped it down the stairs trying to carry it with two fingers, whatever - doesn't matter.
+
+this script is going to:
+
+- install your shit 
+	- chrome
+	- spotify
+	- slack
+	- docker
+	- sublime
+	- zshell
+	- redis
+	- postgres
+	- etc
+- configure your shit 
+	- sublime text settings
+	- some osx settings
+	- zshell
+	- rbenv
+	- pyenv
+	- git
+	- etc
+
+**first thing you do with this computer** (don't even install chrome, dude):
+
+- `git clone https://github.com/heyalexchoi/osx.git && cd osx && sh install.sh`
+- wait. watch the script - some things may break - brew formulas change and stuff - the script doesn't do much to catch any of that. fix the script as you go. copy `~/.zshrc` or `.gitconfig` back into here if you change them.
+
+# good job!
+
+![good job](https://media.giphy.com/media/l0HlyiU60rxnEWady/giphy.gif)
+
 ## Setting up new laptop
 
 1. Install XCode command line tools ([https://developer.apple.com/downloads/](https://developer.apple.com/downloads/), "Sign In" required)

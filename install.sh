@@ -147,7 +147,7 @@ apps=(
   spotify
   vlc
 #  hearthstone-eu # needs further installation
-
+  macdown
   # file sharing
 #  utorrent # Error: Cask 'utorrent' is unavailable: No Cask with this name exists.
 #  unison
