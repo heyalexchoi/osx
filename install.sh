@@ -51,8 +51,9 @@ echo "Installing GNU core utils (those that come with OS X are outdated)..."
 brew install coreutils
 
 echo "Installing more recent versions of some OS X tools..."
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep
+# Error: homebrew/dupes was deprecated. This tap is now empty as all its formulae were migrated.
+#brew tap homebrew/dupes
+#brew install homebrew/dupes/grep
 
 # TODO add utils to zsh path
 
@@ -73,6 +74,7 @@ binaries=(
   postgresql
   pkg-config
   rbenv
+  pyenv
   redis
   rhino
   ruby-build
@@ -91,8 +93,9 @@ brew install ${binaries[@]}
 echo "Cleaning up..."
 brew cleanup
 
-echo "Installing Cask..."
-brew install caskroom/cask/brew-cask
+#Error: Cask 'brew-cask' is unavailable: '/usr/local/Homebrew/Library/Taps/caskroom/homebrew-cask/Casks/brew-cask.rb' does not exist.
+#echo "Installing Cask..."
+#brew install caskroom/cask/brew-cask
 
 echo "Adding nightly/beta Cask versions..."
 brew tap caskroom/versions
@@ -102,49 +105,50 @@ apps=(
 
   # work
   rowanj-gitx
-  iterm2
+#  iterm2
   sublime-text
-  virtualbox
+#  virtualbox
 
   # productivity, core, runtimes
-  caffeine
-  quicksilver
-  nvalt
-  appcleaner
-  osxfuse
+#  caffeine
+#  quicksilver
+#  nvalt
+#  appcleaner
+#  osxfuse
   1password
-  spectacle
-  flash-npapi
+#  spectacle
+#  flash-npapi
   java
-  quicklook-json
-  macpar-deluxe
-  imageoptim
-  grandperspective
-  istat-menus
-  qlvideo # to display video files in finder and quick look
+#  quicklook-json
+#  macpar-deluxe
+#  imageoptim
+#  grandperspective
+#  istat-menus
+#  qlvideo # to display video files in finder and quick look
   postico
+  docker
 
   # sharing
-  dropbox
-  google-drive
+#  dropbox
+#  google-drive
 
   # browsers
   google-chrome
-  firefoxnightly
-  webkit-nightly
+#  firefoxnightly
+#  webkit-nightly
   torbrowser
 
   # communication
-  skype
+#  skype
 
   # entertainment
   spotify
   vlc
-  hearthstone-eu # needs further installation
+#  hearthstone-eu # needs further installation
 
   # file sharing
-  utorrent # needs further installation
-  unison
+#  utorrent # Error: Cask 'utorrent' is unavailable: No Cask with this name exists.
+#  unison
 )
 
 echo "Installing apps to /Applications..."
@@ -152,12 +156,12 @@ brew cask install --appdir="/Applications" ${apps[@]}
 
 echo "Don't forget to install Fleep separately (https://itunes.apple.com/us/app/fleep/id830440781?mt=12)"
 
-brew tap homebrew/fuse
+#brew tap homebrew/fuse # Error: homebrew/fuse was deprecated. This tap is now empty as all its formulae were migrated.
 
 echo "Installing other binaries that require Java, Fuse OS X, etc..."
 post_binaries=(
   elasticsearch
-  ntfs-3g
+#  ntfs-3g
 )
 brew install ${post_binaries[@]}
 
@@ -211,10 +215,16 @@ npm install -g ${node_packages[@]}
 echo "Customizing Sublime..."
 
 # download and "install" Package Control
-wget https://sublime.wbond.net/Package\ Control.sublime-package && mv Package\ Control.sublime-package ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
+cp ./Package\ Control.sublime-package ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
 
 # download and "install" Preferences file
-wget https://rawgit.com/heyalexchoi/osx/master/Preferences.sublime-settings && mv Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+cp ./Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 
 # download and "install" Packages file
-wget https://rawgit.com/heyalexchoi/osx/master/Package\ Control.sublime-settings && mv Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+cp ./Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+
+rbenv init
+pyenv init
+
+cp ./.zshrc ~/.zshrc
+source ~/.zshrc
