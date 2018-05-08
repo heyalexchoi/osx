@@ -136,7 +136,7 @@ apps=(
   google-chrome
 #  firefoxnightly
 #  webkit-nightly
-  torbrowser
+  # torbrowser # cask broken rn
 
   # communication
 #  skype
@@ -223,8 +223,16 @@ cp ./Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 
 # download and "install" Packages file
 cp ./Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 
+echo 'initializing rbenv and pyenv...'
 rbenv init
 pyenv init
 
+echo 'copying ./.zshrc to ~/.zshrc and sourcing'
 cp ./.zshrc ~/.zshrc
 source ~/.zshrc
+
+# sublime as default editor
+defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
+'{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
+
+cp ./.gitconfig ~/.gitconfig
