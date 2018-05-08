@@ -129,6 +129,7 @@ apps=(
 #  qlvideo # to display video files in finder and quick look
   postico
   docker
+  postman
 
   # sharing
 #  dropbox
