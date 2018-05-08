@@ -62,6 +62,7 @@ binaries=(
   autojump
   cairo
   curl
+  heroku
   casperjs
   ffmpeg
   git
@@ -119,6 +120,7 @@ apps=(
 #  spectacle
 #  flash-npapi
   java
+  caskroom/versions/java8 # elasticsearch needs this one
 #  quicklook-json
 #  macpar-deluxe
 #  imageoptim
