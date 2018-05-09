@@ -3,3 +3,5 @@
 # Please adapt and uncomment the following lines:
 	name = alex choi
 	email = heyalexchoi@gmail.com
+[core]
+	editor = subl -n -w
