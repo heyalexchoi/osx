@@ -5,3 +5,5 @@
 	email = heyalexchoi@gmail.com
 [core]
 	editor = subl -n -w
+[credential]
+	helper = osxkeychain

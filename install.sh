@@ -238,4 +238,6 @@ source ~/.zshrc
 defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
 '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
 
+defaults write com.apple.screencapture location ~/Downloads
+
 cp ./.gitconfig ~/.gitconfig
