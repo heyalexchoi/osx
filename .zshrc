@@ -112,3 +112,5 @@ export NVM_DIR="/Users/alexchoi/.nvm"
 eval "$(rbenv init -)"
 # pyenv
 eval "$(pyenv init -)"
+
+export EDITOR='sublime -w'
