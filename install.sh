@@ -239,5 +239,6 @@ defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandle
 '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
 
 defaults write com.apple.screencapture location ~/Downloads
+defaults write com.apple.finder AppleShowAllFiles YES
 
 cp ./.gitconfig ~/.gitconfig
