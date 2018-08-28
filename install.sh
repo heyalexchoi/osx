@@ -240,5 +240,6 @@ defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandle
 
 defaults write com.apple.screencapture location ~/Downloads
 defaults write com.apple.finder AppleShowAllFiles YES
+killall SystemUIServer # make it happen
 
 cp ./.gitconfig ~/.gitconfig
